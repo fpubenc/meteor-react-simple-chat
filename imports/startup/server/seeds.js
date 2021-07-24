@@ -10,36 +10,36 @@ import Chats from '../../api/chats/collection';
 // User
 if(Meteor.users.find().count() == 0) {
     let users = [
-        { username: 'jonsnow', password: '123456'  },
-        { username: 'aryastark', password: '123456'  },
-        { username: 'tyron', password: '123456'  }
+        { username: 'DaveRamsey', password: '123456'  },
+        { username: 'RachelCruze', password: '123456'  },
+        { username: 'KenColeman', password: '123456'  }
     ];
 
     users.forEach((user) => {
         Accounts.createUser(user);
     });
 
-    const jonsnow = Meteor.users.findOne({ username: 'jonsnow' });
-    const aryastark = Meteor.users.findOne({ username: 'aryastark' });
-    const tyron = Meteor.users.findOne({ username: 'tyron' });
+    const DaveRamsey = Meteor.users.findOne({ username: 'DaveRamsey' });
+    const RachelCruze = Meteor.users.findOne({ username: 'RachelCruze' });
+    const KenColeman = Meteor.users.findOne({ username: 'KenColeman' });
 
     // Chat Rooms
     if(ChatRooms.find().count() == 0) {
-        const chatRoomId = ChatRooms.insert({ userId: jonsnow._id, title: 'Jon Snow Room', description: 'And my watch has ended.', isPubic: true });
-        const chatRoomTwoId = ChatRooms.insert({ userId: aryastark._id, title: 'Arya Stark Room', description: 'A lady has no name.', isPubic: true });
+        const chatRoomId = ChatRooms.insert({ userId: DaveRamsey._id, title: 'Dave Ramsey Room', description: 'Better than I deserve.', isPublic: true });
+        const chatRoomTwoId = ChatRooms.insert({ userId: RachelCruze._id, title: 'Rachel Cruze Room', description: 'Do not touch my guac.', isPublic: true });
 
         // Chat Room Members
         if(ChatRoomMembers.find().count() == 0) {
-            ChatRoomMembers.insert({ chatRoomId, userId: jonsnow._id });
-            ChatRoomMembers.insert({ chatRoomId, userId: aryastark._id });
-            ChatRoomMembers.insert({ chatRoomId, userId: tyron._id });
+            ChatRoomMembers.insert({ chatRoomId, userId: DaveRamsey._id });
+            ChatRoomMembers.insert({ chatRoomId, userId: RachelCruze._id });
+            ChatRoomMembers.insert({ chatRoomId, userId: KenColeman._id });
         }
 
         // Chats
         if(Chats.find().count() == 0) {
-            Chats.insert({ chatRoomId, userId: jonsnow._id, message: 'Hello from jonsnow' });
-            Chats.insert({ chatRoomId, userId: aryastark._id, message: 'Hello from aryastark' });
-            Chats.insert({ chatRoomId, userId: tyron._id, message: 'Hello from tyron' });
+            Chats.insert({ chatRoomId, userId: DaveRamsey._id, message: 'Hello from DaveRamsey' });
+            Chats.insert({ chatRoomId, userId: RachelCruze._id, message: 'Hello from RachelCruze' });
+            Chats.insert({ chatRoomId, userId: KenColeman._id, message: 'Hello from KenColeman' });
         }
     }
 }

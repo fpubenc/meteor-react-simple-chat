@@ -36,7 +36,7 @@ class ChatRoomsCreate extends React.Component {
             const input = {
                 title: this.state.roomTitle.trim(),
                 description: this.state.roomDescription.trim(),
-                isPubic: true
+                isPublic: true
             };
 
             try {

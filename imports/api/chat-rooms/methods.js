@@ -19,12 +19,12 @@ export const add = new ValidatedMethod({
             type: String
         },
 
-        isPubic: {
+        isPublic: {
             type: Boolean
         }
     }).validator(),
 
-    run({ title, description, isPubic }) {
+    run({ title, description, isPublic }) {
         console.log('M - ChatRooms.add / run');
 
         let response = {
@@ -42,7 +42,7 @@ export const add = new ValidatedMethod({
                     title,
                     description,
                     userId: Meteor.userId(),
-                    isPubic
+                    isPublic
                 });
 
                 if(chatRoomId) {
@@ -112,7 +112,7 @@ export const getDirectMessageRoom = new ValidatedMethod({
                         title: `${ Meteor.user().username } and ${ friendUser.username }`,
                         description: 'Direct Message',
                         userId: Meteor.userId(),
-                        isPubic: false
+                        isPublic: false
                     });
 
                     // Add chat room members

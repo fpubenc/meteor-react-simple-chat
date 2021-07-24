@@ -24,7 +24,7 @@ ChatRooms.schema = new SimpleSchema({
         type: String
     },
 
-    isPubic: {
+    isPublic: {
         type: Boolean
     },
 

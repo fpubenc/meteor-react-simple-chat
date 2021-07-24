@@ -30,6 +30,7 @@ class MenuPrimary extends React.Component {
     render() {
         return (
             <ul className="menu-primary">
+                <li><h2>Gazelle Chat Rooms</h2></li>
                 <li><Link to="/"><i className="material-icons">group</i> Chat Rooms</Link></li>
 
                 { this.renderLinks() }

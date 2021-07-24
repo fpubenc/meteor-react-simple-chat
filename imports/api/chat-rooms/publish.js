@@ -8,7 +8,7 @@ import ChatRooms from './collection';
 Meteor.publishComposite('public-chat-rooms-publication', () => {
     return {
         find: function () {
-            return ChatRooms.find({ isPubic: true }, { sort: { createdAt: -1 } });
+            return ChatRooms.find({ isPublic: true }, { sort: { createdAt: -1 } });
         },
         children: [,
             {

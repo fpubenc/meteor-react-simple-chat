@@ -2,8 +2,8 @@
     html, body {
         padding: 0;
         margin: 0;
-        background-color: #ffffff;
-        color: black;
+        background-color: rgb(255, 236, 128);
+        color: #0e094b;
         line-height: normal;
         font-family: 'Roboto', sans-serif;
     }
@@ -18,7 +18,7 @@
 /* --------------- / Common --------------- */
 
 /* --------------- Typography --------------- */
-    a { text-decoration: none; color: black; }
+    a { text-decoration: none; color: #0e094b; }
     .tx-center { text-align: center; }
     .tx-uppercase { text-transform: uppercase; }
     .tx-underlined { text-decoration: underline; }
@@ -120,12 +120,12 @@
 
     /* card */
         .card {
-            border: 1px solid #f3f3f3;
+            border: 1px solid #0e094b;
             padding: 1rem;
             cursor: pointer;
         }
         .card.active, .card:hover {
-            background-color: #f3f3f3;
+            background-color: rgb(255, 236, 128);
         }
         .card .card-header {
             font-weight: 500;
