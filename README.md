@@ -1,2 +1,2 @@
 # 💬 Simple Chat
-A simple chat application built with Meteor 1.4 and ReactJS
+Fork of a Meteor / ReactJS chat application.
